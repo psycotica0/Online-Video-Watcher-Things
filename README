@@ -1,0 +1,19 @@
+These are some scripts I wrote to help me watch online videos on my terms.
+Also, stream them.
+
+Basically vidLink is in charge of taking in a page and grabbing the link to the video on that page.
+
+The other scripts do different things with those links.
+All of these scripts currently take input from the Mac clipboard. (Well, except playVids)
+
+testVid: This just prints the link out, so I can debug / make sure it works
+clipVid: This takes the link and plays it.
+getVids: This is a loop. It puts each link into ~/.vids (For making a playlist with a bunch of links)
+playVids: This plays each link that's in ~/.vids (For playing that playlist)
+
+Right now it's very much dependent on my system.
+I'm ok with that for now.
+For example, it hard-codes a couple of paths, and it relies on my "scrape" util.
+
+Also, I've included urlDecode in here.
+It just calls php to urlDecode stdin to stdout.
