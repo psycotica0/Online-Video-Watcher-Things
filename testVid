@@ -1,0 +1,4 @@
+#!/bin/sh
+
+. vidLink
+getVideo "`pbpaste`"

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+. vidLink
+
+file="/Users/cavollic/.vids"
+echo -n "" > "$file"
+
+while read line; do
+	page="`pbpaste`"
+	link="`getVideo "$page"`"
+	echo -n "$link " >> $file
+done

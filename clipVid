@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. vidLink
+page="`pbpaste`"
+link="`getVideo "$page"`"
+
+/Applications/VLC.app/Contents/MacOS/VLC "$link" $@
