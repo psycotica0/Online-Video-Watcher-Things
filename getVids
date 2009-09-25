@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. vidLink
+. /usr/local/include/vidLink
 
 file="/Users/cavollic/.vids"
 echo -n "" > "$file"

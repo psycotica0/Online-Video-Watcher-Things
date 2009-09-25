@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. vidLink
+. /usr/local/include/vidLink
 page="`pbpaste`"
 link="`getVideo "$page"`"
 

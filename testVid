@@ -1,4 +1,4 @@
 #!/bin/sh
 
-. vidLink
+. /usr/local/include/vidLink
 getVideo "`pbpaste`"
