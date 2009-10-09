@@ -13,6 +13,10 @@ function getVideo {
 			# If we can't find 18, just get the first result
 			link="`echo "$links" | head -n1 | cut -d ' ' -f2`"
 		fi
+	else
+		# If we don't know what to do with it, just pass it through
+		# Maybe it's a link to media already
+		link="$page"
 	fi
 	echo "$link"
 }
