@@ -6,7 +6,7 @@ function getVideo {
 		vid="`echo $page | grep -o 'video:[0-9]*'`"
 		link="`curl -sL "http://www.collegehumor.com/moogaloop/$vid" | scrape -b '' -a '' -d '' '<file>([^<]*)</file>'`"
 	elif [ -n "`echo "$page" | grep youtube`" ]; then
-		links="`curl -sL "$page" | scrape -b '' -a '' -d '' '"fmt_url_map"\s*:\s*"([^"]*)"' | urlDecode | scrape -b '' -a '' -d ' ' '(\d*)\s*.\s*(http://[^,]*)'`"
+		links="`curl -sL "$page" | scrape -b '' -a '' -d '' '&fmt_stream_map=([^&]*)&' | urlDecode | scrape -b '' -a '' -d ' ' '(\d*)\s*.\s*(http://[^,]*)'`"
 		# Format 18 is perferable
 		link="`echo "$links" | grep '^18 ' | cut -d ' ' -f2`"
 		if [ -z "$link" ]; then
