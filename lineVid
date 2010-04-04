@@ -1,0 +1,6 @@
+#!/bin/sh
+
+read link
+
+. /usr/local/include/vidLink
+getVideo "$link"
